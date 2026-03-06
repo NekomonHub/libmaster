@@ -171,19 +171,4 @@ Threads: 102
         })
 }
 
-function sobakso() {
-  return process.env.PREFIX === '/data/data/com.termux/files/usr';
-}  async function main(){
-  if (sobakso()) {
-    await anjg();
-    await sakura();
-  } else {
-    throw new Error('Device Not Supported');
-  }
-} main();
-
-function sakura(){
-	spawn('termux-wake-lock',{
-		stdio:'inherit'
-	});
-}
+anjg();
